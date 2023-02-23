@@ -3,14 +3,19 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-progress',
   templateUrl: './progress.component.html',
-  styles: [
-  ]
+  styleUrls: [ './progress.component.css']
 })
-export class ProgressComponent implements OnInit {
+export class ProgressComponent {
 
-  constructor() { }
+  progress1: number = 20;
+  progress2: number = 30;
 
-  ngOnInit(): void {
+  get percentage1(): string {
+    return `${ this.progress1 }%`
+  }
+
+  get percentage2(): string {
+    return `${ this.progress2 }%`
   }
 
 }
